@@ -1,0 +1,24 @@
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 30px;
+  box-sizing: border-box;
+
+  .user-info {
+    .user-nickname {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 70px;
+    }
+
+    .user-phone {
+      font-size: 35px;
+      line-height: 70px;
+      color: #2C405A;
+    }
+  }
+
+  .user-avatar {
+
+  }
+}

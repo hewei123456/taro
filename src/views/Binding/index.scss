@@ -1,0 +1,39 @@
+.binding-page {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .binding-content {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    .row-wrapper {
+      position: relative;
+      padding-bottom: 60px;
+
+      .input-wrapper {
+        border-bottom: 1px solid #eee;
+
+        .at-input::after {
+          border-bottom-width: 0 !important;
+          border-top-width: 0 !important;
+        }
+
+        .at-input__children::after {
+          border-left: 0 !important;
+        }
+
+        .prefix-icon {
+          transform: translate(60%, 60%);
+        }
+      }
+    }
+
+    .button-wrapper {
+      padding-top: 30px;
+    }
+  }
+}

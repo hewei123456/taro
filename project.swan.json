@@ -1,0 +1,18 @@
+{
+    "appid": "17767960",
+    "host": "baiduboxapp",
+    "preview": {
+        "packageId": 706278
+    },
+    "projectname": "baidu-taro",
+    "setting": {
+        "urlCheck": true
+    },
+    "smartProgramRoot": "dist/swan/",
+    "swan": {
+        "baiduboxapp": {
+            "swanJsVersion": "3.180.7",
+            "extensionJsVersion": "1.13.1"
+        }
+    }
+}
