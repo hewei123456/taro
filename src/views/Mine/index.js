@@ -7,8 +7,12 @@ import { order, order_wait, person } from '@static';
 import './index.scss';
 
 class Mine extends PureComponent {
-  config = {
+  static config = {
     navigationBarTitleText: '我的',
+  };
+
+  static options = {
+    addGlobalClass: true,
   };
 
   render() {

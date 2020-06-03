@@ -21,7 +21,7 @@ let timeoutid, id = 0;
   },
 }))
 export default class Index extends PureComponent {
-  config = {
+  static config = {
     navigationBarTitleText: '首页',
   };
 
