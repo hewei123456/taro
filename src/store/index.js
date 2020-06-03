@@ -5,8 +5,7 @@ import thunkMiddleware from 'redux-thunk';
 import reducer from './reducer';
 import { persistStore, persistReducer } from 'redux-persist';
 import immutableTransform from 'redux-persist-transform-immutable';
-import storage from 'redux-persist-weapp-storage/lib/bundle';
-import swanStorage from './storage/swan';
+import storage from './storage';
 
 const composeEnhancers =
   typeof window === 'object' &&
@@ -27,7 +26,7 @@ const enhancer = composeEnhancers(
 
 const persistConfig = {
   key: 'root',
-  storage: process.env.TARO_ENV === 'swan' ? swanStorage : storage,
+  storage,
   transforms: [immutableTransform()],
 };
 

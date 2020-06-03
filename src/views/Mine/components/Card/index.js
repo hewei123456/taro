@@ -1,7 +1,6 @@
 import Taro, { PureComponent } from '@tarojs/taro';
 import { OpenData, View } from '@tarojs/components';
 import { AtAvatar } from 'taro-ui';
-import { navigateToBinding } from '@utils/router';
 
 import './index.scss';
 
@@ -14,9 +13,7 @@ export default class Card extends PureComponent {
           <View className='user-nickname'>
             <OpenData className='name' type='userNickName' lang='zh_CN'/>
           </View>
-          <View className='user-phone' onClick={() => {
-            navigateToBinding();
-          }}>
+          <View className='user-phone'>
             13439093625
           </View>
         </View>

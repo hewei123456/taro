@@ -1,10 +1,10 @@
 import Taro, { PureComponent } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
 import { AtSearchBar, AtTabs, AtFab } from 'taro-ui';
-import { Card, Layout } from '@components';
+import { Card, Layout } from '@/components';
 
 import { connect } from '@tarojs/redux';
-import { addItem, deleteItem } from '@store/reducers/todo';
+import { addItem, deleteItem } from '@/store/reducers/todo';
 
 import './index.scss';
 
