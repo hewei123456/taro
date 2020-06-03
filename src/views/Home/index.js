@@ -4,14 +4,14 @@ import { AtSearchBar, AtTabs, AtFab } from 'taro-ui';
 import { Card, Layout } from '@components';
 
 import { connect } from '@tarojs/redux';
-import { addItem, deleteItem } from '@store/reducers/app';
+import { addItem, deleteItem } from '@store/reducers/todo';
 
 import './index.scss';
 
 let timeoutid, id = 0;
 
-@connect(({ app }) => ({
-  list: app.list,
+@connect(({ todo }) => ({
+  list: todo.list,
 }), dispatch => ({
   addItem(item) {
     dispatch(addItem(item));

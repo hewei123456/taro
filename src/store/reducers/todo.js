@@ -1,4 +1,3 @@
-import Taro from '@tarojs/taro';
 import { fromJS } from 'immutable';
 
 
