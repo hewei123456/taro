@@ -4,7 +4,6 @@ import { getQuery } from '.';
 export const pages = {
   home: '/views/Home/index',
   mine: '/views/Mine/index',
-  binding: '/views/Binding/index',
 };
 
 const navigateTo = (url, params) => {
@@ -23,4 +22,3 @@ const reLaunchTo = (url, params) => {
 };
 
 export const reLaunchToHome = () => reLaunchTo(pages.home);
-export const navigateToBinding = () => navigateTo(pages.binding);

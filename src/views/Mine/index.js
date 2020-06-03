@@ -3,7 +3,6 @@ import { View } from '@tarojs/components';
 import { AtList, AtListItem } from 'taro-ui';
 import Card from './components/Card';
 import { order, order_wait, person } from '@static';
-import { navigateToInfo, navigateToOrder } from '@utils/router';
 
 import './index.scss';
 
@@ -15,7 +14,7 @@ class Mine extends PureComponent {
   render() {
     return (
       <View className='wrapper'>
-        <Card/>
+        <Card />
 
         <AtList hasBorder={false}>
           <AtListItem

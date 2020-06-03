@@ -16,7 +16,6 @@ class App extends Component {
     pages: [
       'views/Home/index',
       'views/Mine/index',
-      'views/Binding/index',
     ],
     window: {
       'navigationBarTextStyle': 'black',
