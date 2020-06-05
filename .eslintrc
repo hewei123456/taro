@@ -3,6 +3,11 @@
     "taro"
   ],
   "rules": {
+    "brace-style": [
+      1,
+      "1tbs"
+    ],
+    "no-console": 2,
     "no-unused-vars": [
       "error",
       {
