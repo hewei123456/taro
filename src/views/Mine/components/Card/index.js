@@ -11,7 +11,8 @@ export default class Card extends PureComponent {
       <View className="user-card">
         <View className="user-info">
           <View className="user-nickname">
-            <OpenData className="name"
+            <OpenData
+              className="name"
               lang="zh_CN"
               type="userNickName"
             />
@@ -21,7 +22,8 @@ export default class Card extends PureComponent {
           </View>
         </View>
         <View className="user-avatar">
-          <AtAvatar circle
+          <AtAvatar
+            circle
             openData={{ type: 'userAvatarUrl' }}
             size="large"
           />

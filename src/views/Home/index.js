@@ -147,11 +147,11 @@ export default class Index extends PureComponent {
                   key={item.id}
                   className="card-item"
                 >
-                  <Card i
-                    mage={item.image}
+                  <Card
+                    image={item.image}
                     onClick={() => {
-                          deleteItem(index)
-                        }}
+                      deleteItem(index)
+                    }}
                     price={item.price}
                     title={item.title}
                   />

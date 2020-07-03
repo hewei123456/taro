@@ -1,8 +1,8 @@
 import Taro, { PureComponent } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { AtList, AtListItem } from 'taro-ui'
+import { order, order_wait, person } from '@/static'
 import Card from './components/Card'
-import { order, order_wait, person } from '@static'
 
 import './index.scss'
 

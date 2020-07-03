@@ -8,7 +8,7 @@ const Layout = props => (
   <View>
     {
       props.loading ?
-        (<View class="indicator-mask">
+        (<View className="indicator-mask">
           <AtActivityIndicator mode="center" />
         </View>) : null
     }

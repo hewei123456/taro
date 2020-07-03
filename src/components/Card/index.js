@@ -5,7 +5,8 @@ import './index.scss'
 
 const Card = props => {
   return (
-    <View className="card-wrapper"
+    <View
+      className="card-wrapper"
       onClick={() => {
             props.onClick()
           }}
