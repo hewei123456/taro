@@ -1,45 +1,45 @@
-import Taro, { PureComponent } from '@tarojs/taro';
-import { View } from '@tarojs/components';
-import { AtList, AtListItem } from 'taro-ui';
-import Card from './components/Card';
-import { order, order_wait, person } from '@static';
+import Taro, { PureComponent } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import { AtList, AtListItem } from 'taro-ui'
+import Card from './components/Card'
+import { order, order_wait, person } from '@static'
 
-import './index.scss';
+import './index.scss'
 
 class Mine extends PureComponent {
   static config = {
-    navigationBarTitleText: '我的',
-  };
+    navigationBarTitleText: '我的'
+  }
 
   static options = {
-    addGlobalClass: true,
-  };
+    addGlobalClass: true
+  }
 
-  render() {
+  render () {
     return (
-      <View className='wrapper'>
+      <View className="wrapper">
         <Card />
 
         <AtList hasBorder={false}>
           <AtListItem
-            title='个人信息'
-            arrow='right'
+            arrow="right"
             thumb={person}
+            title="个人信息"
           />
           <AtListItem
-            title='已完成订单'
-            arrow='right'
+            arrow="right"
             thumb={order}
+            title="已完成订单"
           />
           <AtListItem
-            title='待收货订单'
-            arrow='right'
+            arrow="right"
             thumb={order_wait}
+            title="待收货订单"
           />
         </AtList>
       </View>
-    );
+    )
   }
 }
 
-export default Mine;
+export default Mine

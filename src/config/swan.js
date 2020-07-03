@@ -1,3 +1,3 @@
 module.exports = {
-  appid: '17767960',
-};
+  appid: '17767960'
+}

@@ -1,3 +1,3 @@
-import { post } from './index';
+import { post } from './index'
 
 

@@ -6,8 +6,8 @@ module.exports = config => {
       '@utils': require('path').resolve(__dirname, 'src/utils'),
       '@request': require('path').resolve(__dirname, 'src/request'),
       '@store': require('path').resolve(__dirname, 'src/store'),
-      '@static': require('path').resolve(__dirname, 'src/static'),
-    },
-  };
-  return config;
-};
+      '@static': require('path').resolve(__dirname, 'src/static')
+    }
+  }
+  return config
+}

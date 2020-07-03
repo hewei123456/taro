@@ -1,25 +1,37 @@
-import '@tarojs/async-await';
-import Taro, { Component } from '@tarojs/taro';
+import '@tarojs/async-await'
+import Taro, { Component } from '@tarojs/taro'
 
-import { Provider } from '@tarojs/redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import configStore from '@store';
+import { Provider } from '@tarojs/redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import configStore from '@store'
 
-import './style/custom-variables.scss';
-import './style/iconfont/iconfont.css';
-import './app.scss';
+import './style/custom-variables.scss'
+import './style/iconfont/iconfont.css'
+import './app.scss'
 
-const { store, persistor } = configStore();
+const { store, persistor } = configStore()
 
 class App extends Component {
-  config = {
+  componentDidMount () {
+  }
+
+  componentDidShow () {
+  }
+
+  componentDidHide () {
+  }
+
+  componentDidCatchError () {
+  }
+
+  static config = {
     pages: [
       'views/Home/index',
-      'views/Mine/index',
+      'views/Mine/index'
     ],
     window: {
       'navigationBarTextStyle': 'black',
-      'navigationBarBackgroundColor': '#ffffff',
+      'navigationBarBackgroundColor': '#ffffff'
     },
     tabBar: {
       color: '#aaa',
@@ -30,41 +42,29 @@ class App extends Component {
           pagePath: 'views/Home/index',
           text: '首页',
           iconPath: 'static/images/tab/home.png',
-          selectedIconPath: 'static/images/tab/home_h.png',
+          selectedIconPath: 'static/images/tab/home_h.png'
         },
         {
           pagePath: 'views/Mine/index',
           text: '我的',
           iconPath: 'static/images/tab/mine.png',
-          selectedIconPath: 'static/images/tab/mine_h.png',
-        },
-      ],
-    },
-  };
-
-  store = store;
-
-  componentDidMount() {
+          selectedIconPath: 'static/images/tab/mine_h.png'
+        }
+      ]
+    }
   }
 
-  componentDidShow() {
-  }
-
-  componentDidHide() {
-  }
-
-  componentDidCatchError() {
-  }
-
-  render() {
+  render () {
     return (
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Index/>
+        <PersistGate loading={null}
+          persistor={persistor}
+        >
+          <Index />
         </PersistGate>
       </Provider>
-    );
+    )
   }
 }
 
-Taro.render(<App/>, document.getElementById('app'));
+Taro.render(<App />, document.getElementById('app'))

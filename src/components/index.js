@@ -1,4 +1,4 @@
-import Layout from './Layout';
-import Card from './Card';
+import Layout from './Layout'
+import Card from './Card'
 
-export { Layout, Card };
+export { Layout, Card }

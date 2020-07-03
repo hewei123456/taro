@@ -1,39 +1,39 @@
-import Taro from '@tarojs/taro';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import Taro from '@tarojs/taro'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { persistStore, persistReducer } from 'redux-persist'
+import immutableTransform from 'redux-persist-transform-immutable'
 
-import reducer from './reducer';
-import { persistStore, persistReducer } from 'redux-persist';
-import immutableTransform from 'redux-persist-transform-immutable';
-import storage from './storage';
+import reducer from './reducer'
+import storage from './storage'
 
 const composeEnhancers =
   typeof window === 'object' &&
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose
 
 const middlewares = [
-  thunkMiddleware,
-];
+  thunkMiddleware
+]
 
 if (process.env.NODE_ENV === 'development') {
-  middlewares.push(require('redux-logger').createLogger());
+  middlewares.push(require('redux-logger').createLogger())
 }
 
 const enhancer = composeEnhancers(
-  applyMiddleware(...middlewares),
-);
+  applyMiddleware(...middlewares)
+)
 
 const persistConfig = {
   key: 'root',
   storage,
-  transforms: [immutableTransform()],
-};
+  transforms: [immutableTransform()]
+}
 
-const persistedReducer = persistReducer(persistConfig, reducer);
+const persistedReducer = persistReducer(persistConfig, reducer)
 
 export default () => {
-  let store = createStore(persistedReducer, enhancer);
-  let persistor = persistStore(store);
-  return { store, persistor };
+  let store = createStore(persistedReducer, enhancer)
+  let persistor = persistStore(store)
+  return { store, persistor }
 }
